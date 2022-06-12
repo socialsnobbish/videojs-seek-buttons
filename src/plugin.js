@@ -1,5 +1,5 @@
 import videojs from 'video.js';
-import {version as VERSION} from '../package.json';
+import * as packageInfo from '../package.json';
 
 const Button = videojs.getComponent('Button');
 
@@ -75,7 +75,7 @@ const seekButtons = function(options) {
 };
 
 // Include the version number.
-seekButtons.VERSION = VERSION;
+seekButtons.VERSION = packageInfo.version;
 
 /**
  * Button to seek forward/back
